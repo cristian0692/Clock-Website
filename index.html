@@ -1,51 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
     <title>Clocks</title>
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/clock.css" />
+    <meta charset="UTF-8">
+<!-- CSS only -->
+<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/header.css" />
+ <link rel="stylesheet" href="./css/clock.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 </head>
+<!-- header start  -->
 <header>
-    <div class = "block-header">
-        <div class ="logo">
-            <h1>Clocks</h1>
+
+    <body>
+        <div class="block-header">
+            <div class="logo">
+                <h3>Clocks</h3>
+            </div>
+            <div class="head-start">
+                <a href="#">Home</a>
+            </div>
+            <div class="head-item">
+                <a href="#">Support</a>
+            </div>
+            <div class="head-item">
+                <a href="#">Settings</a>
+            </div>
         </div>
-        
-    </div>
 
 </header>
-<body>
-    <div class="clock">
-        <div class="hour">
-            <div class="hr" id="hr"></div>
+<!-- header end  -->
+<!-- body start  -->
+
+<div class="block-setting">
+        <div class="s-button">
+            <div class="form-check form-switch">
+                <input onclick="changeRoundness();" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Roundness</label>
+              </div>
         </div>
-        <div class="min">
-            <div class="mn" id="mn"></div>
+        <div class="s-button">
+            <div class="form-check form-switch">
+                <input onclick="changeImage();"class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Numbers</label>
+              </div>
         </div>
-        <div class="sec">
-            <div class="sc" id="sc"></div>
-        </div>
+        
+
+
+</div>
+<div class="clock" id ="clockId">
+    <div class="hour">
+        <div class="hr" id="hr"></div>
     </div>
-    <script type="text/javascript">
-        const deg =6;
-        const hr = document.querySelector('#hr');
-        const mn = document.querySelector('#mn');
-        const sc = document.querySelector('#sc');
+    <div class="min">
+        <div class="mn" id="mn"></div>
+    </div>
+    <div class="sec">
+        <div class="sc" id="sc"></div>
+    </div>
+</div>
+<!-- scripts start -->
+<script type="text/javascript">
+    const deg = 6;
+    const hr = document.querySelector('#hr');
+    const mn = document.querySelector('#mn');
+    const sc = document.querySelector('#sc');
 
-        setInterval(() =>{
-            let day = new Date();
-            let hh = day.getHours() * 30 ;
-            let mm = day.getMinutes() * deg;
-            let ss = day.getSeconds() * deg;
+    setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
 
-            hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
-            mn.style.transform = `rotateZ(${(mm)}deg)`;
-            sc.style.transform = `rotateZ(${(ss)}deg)`;
-            
-        });
+        hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+        mn.style.transform = `rotateZ(${(mm)}deg)`;
+        sc.style.transform = `rotateZ(${(ss)}deg)`;
 
-       
-    </script>
+    });
+</script>
 </body>
+<!-- body end  -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src = './js/index.js'></script>
 </html>

@@ -1,0 +1,23 @@
+*{
+    font-family: Helvetica, Arial, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.block-setting
+{
+    margin :10%;
+    background-color: #153241;
+    width: 80%;
+    border-radius: 10px;
+    height: 200px;
+}
+.s-button{
+    padding: 20px;
+}
+.form-check-label{
+
+    color: white;
+}
