@@ -12,8 +12,6 @@
 </head>
 <!-- header start  -->
 <header>
-
-    <body>
         <div class="block-header">
             <div class="logo">
                 <h3>Clocks</h3>
@@ -32,8 +30,10 @@
 </header>
 <!-- header end  -->
 <!-- body start  -->
-
+<body>
+<h1 class = "s-title">Settings</h1>
 <div class="block-setting">
+    <div class="set-col">
         <div class="s-button">
             <div class="form-check form-switch">
                 <input onclick="changeRoundness();" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -42,10 +42,29 @@
         </div>
         <div class="s-button">
             <div class="form-check form-switch">
-                <input onclick="changeImage();"class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <input onclick="changeImage();"class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault2">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Numbers</label>
               </div>
         </div>
+        <div class="mb-3">
+           <input class="form-control" type="file" id="formFile">
+          </div>
+    </div>
+        <div class="set-col">
+            <div class="s-button">
+                <div class="form-check form-switch">
+                    <input onclick="changeLights();"class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault3">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Border</label>
+                  </div>
+            </div>
+            <div class="s-button">
+                <div class="form-check form-switch">
+                    <input onclick="changeSeconds();"class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault4">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Remove Seconds</label>
+                  </div>
+            </div>
+        </div>
+          
         
 
 
@@ -57,7 +76,7 @@
     <div class="min">
         <div class="mn" id="mn"></div>
     </div>
-    <div class="sec">
+    <div class="sec" id ="secId">
         <div class="sc" id="sc"></div>
     </div>
 </div>
