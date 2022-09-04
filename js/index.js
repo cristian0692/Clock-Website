@@ -1,5 +1,6 @@
 elem = document.getElementById('clockId');
 border = true;
+bol = false;
 function changeRoundness()
 {
         if(elem.style.borderRadius != "15%")
@@ -55,4 +56,17 @@ function changeSeconds(){
         elem3.style.opacity = "0";
     else
         elem3.style.opacity = "1";
+}
+function darken(){
+    if(bol == false)
+    {
+        elem.style.borderColor = "#050d11";   
+        bol = true;
+    }
+    else
+    {
+        elem.style.borderColor = "transparent"; 
+        bol = false;
+    }
+    
 }

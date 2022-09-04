@@ -6,6 +6,11 @@
     box-sizing: border-box;
 
 }
+body{
+    
+    min-height: 100vh;
+    background: #091921;
+}
 
 .block-setting
 {
@@ -29,7 +34,7 @@
     border: none;
     color: rgb(86, 91, 93);
     margin:10px;
-    width: 70%;
+    width: 90%;
 }
 
 .form-check-input{
